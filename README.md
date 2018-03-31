@@ -63,9 +63,14 @@
     
 **拉取项目：**
 
-先fork项目到你的账户，再拉取代码到本地:
+clone项目:
 
-    git clone https://gitee.com/{{yourUsername}}/Fastjee.git
+    git clone https://gitee.com/wuwenze/Fastjee.git
+
+再fork配置中心仓库到你的账户，再拉取代码到本地:
+https://gitee.com/wuwenze/fastjee-config-repo
+
+    git clone https://gitee.com/{{yourUsername}}/fastjee-config-repo.git
     
 
 **导入项目、修改配置：**
@@ -76,7 +81,7 @@
 
 2.通过idea导入Fastjee项目 （使用Maven的方式导入），等待项目building完毕后，修改相关配置：
 
-    /Fastjee/fastjee-config-repo/application-dev.yml
+    /fastjee-config-repo/application-dev.yml
     在此文件中修改有关mysql和redis连接相关的参数
     
     /Fastjee/fastjee-config/src/main/resources/application.yml
@@ -92,7 +97,7 @@
               username:
               password:
 
-提交相关的修改到github。
+提交相关配置文件的修改到github。
 
 3.关于vue的API访问跨域代理（可使用默认配置）
 
