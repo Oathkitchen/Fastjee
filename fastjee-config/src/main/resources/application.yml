@@ -11,8 +11,8 @@ spring:
       label: master
       server:
         git:
-          uri: https://gitee.com/wuwenze/Fastjee.git
-          searchPaths: fastjee-config-repo
+          uri: https://gitee.com/wuwenze/fastjee-config-repo.git
+          searchPaths:
           username:
           password:
 
@@ -20,9 +20,14 @@ spring:
 eureka:
   instance:
     hostname: fastjee-config.com
+    # 更改eureka更新频率, 关闭eureka的自我保护机制.
+    leaseRenewalIntervalInSeconds: 5 # 租期更新时间间隔(默认30秒)
+    leaseExpirationDurationInSeconds: 20 # 租期到期时间(默认90秒)
   client:
     serviceUrl:
       defaultZone: http://fastjee:123456@fastjee-registration.com:5000/eureka/
+    healthcheck:
+      enabled: true # 开启健康检查（需要spring-boot-starter-actuator依赖）
 
 logging:
   config: classpath:logback.xml

@@ -1,8 +1,0 @@
-server:
-  port: 5005
-
-security:
-  oauth2:
-    clientId: fastjee
-    clientSecret: fastjee
-    scope: webapp

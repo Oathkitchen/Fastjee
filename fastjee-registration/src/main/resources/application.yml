@@ -16,9 +16,9 @@ eureka:
     serviceUrl:
         defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   # 关闭eureka自我保护机制
-#  server:
-#    enable-self-preservation: false
-#    eviction-interval-timer-in-ms: 5000
+  server:
+    enableSelfPreservation: false
+    evictionIntervalTimerInMs: 4000 # 清理间隔（单位毫秒，默认是60*1000）
 
 # Eureka 安全认证
 security:
