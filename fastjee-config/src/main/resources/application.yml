@@ -11,8 +11,8 @@ spring:
       label: master
       server:
         git:
-          uri: https://gitee.com/wuwenze/fastjee-config-repo.git
-          searchPaths:
+          uri: https://github.com/Oathkitchen/fastjee-config-repo.git
+          searchPaths: fastjee-config-repo
           username:
           password:
 
